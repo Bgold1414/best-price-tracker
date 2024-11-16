@@ -1,0 +1,292 @@
+2024-11-16 12:44:32,709 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-16 12:44:32,709 [33mPress CTRL+C to quit[0m
+2024-11-16 12:44:32,710  * Restarting with stat
+2024-11-16 12:44:33,705  * Debugger is active!
+2024-11-16 12:44:33,709  * Debugger PIN: 999-215-347
+2024-11-16 12:44:52,884 Request Method: GET, URL: http://127.0.0.1:5000/
+2024-11-16 12:44:52,896 127.0.0.1 - - [16/Nov/2024 12:44:52] "GET / HTTP/1.1" 200 -
+2024-11-16 12:44:52,937 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:44:52,984 127.0.0.1 - - [16/Nov/2024 12:44:52] "GET /static/style.css HTTP/1.1" 200 -
+2024-11-16 12:44:53,138 Request Method: GET, URL: http://127.0.0.1:5000/favicon.ico
+2024-11-16 12:44:53,139 127.0.0.1 - - [16/Nov/2024 12:44:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-16 12:47:19,094 Request Method: POST, URL: http://127.0.0.1:5000/search
+2024-11-16 12:47:19,095 Form Data: ImmutableMultiDict([('game_name', 'Call Duty ')])
+2024-11-16 12:47:19,096 Search requested for game: Call Duty 
+2024-11-16 12:47:19,116 Database search returned 0 result(s)
+2024-11-16 12:47:19,116 Game not found in local database. Fetching from Steam API for: Call Duty 
+2024-11-16 12:47:19,119 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:19,447 https://store.steampowered.com:443 "GET /api/storesearch/?term=Call%20Duty%20&l=english&cc=us HTTP/11" 200 623
+2024-11-16 12:47:19,448 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:19,756 https://store.steampowered.com:443 "GET /api/appdetails?appids=2933620 HTTP/11" 200 4915
+2024-11-16 12:47:19,761 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:20,001 https://store.steampowered.com:443 "GET /api/appdetails?appids=1938090 HTTP/11" 200 5103
+2024-11-16 12:47:20,004 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:20,328 https://store.steampowered.com:443 "GET /api/appdetails?appids=1962663 HTTP/11" 200 2964
+2024-11-16 12:47:20,329 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:20,586 https://store.steampowered.com:443 "GET /api/appdetails?appids=311210 HTTP/11" 200 5621
+2024-11-16 12:47:20,588 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:20,844 https://store.steampowered.com:443 "GET /api/appdetails?appids=2519060 HTTP/11" 200 3417
+2024-11-16 12:47:20,845 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:21,164 https://store.steampowered.com:443 "GET /api/appdetails?appids=202970 HTTP/11" 200 3655
+2024-11-16 12:47:21,166 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:21,652 https://store.steampowered.com:443 "GET /api/appdetails?appids=1985810 HTTP/11" 200 3561
+2024-11-16 12:47:21,655 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:21,887 https://store.steampowered.com:443 "GET /api/appdetails?appids=2170970 HTTP/11" 200 3067
+2024-11-16 12:47:21,888 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:22,137 https://store.steampowered.com:443 "GET /api/appdetails?appids=42700 HTTP/11" 200 3882
+2024-11-16 12:47:22,138 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:47:22,462 https://store.steampowered.com:443 "GET /api/appdetails?appids=2000950 HTTP/11" 200 3389
+2024-11-16 12:47:22,463 Found 8 game(s) on Steam API, adding to local database.
+2024-11-16 12:47:22,464 Game 'Call of Duty®: Black Ops 6' already exists in the database. Updating price.
+2024-11-16 12:47:22,465 Game 'Call of Duty®: Black Ops III' already exists in the database. Updating price.
+2024-11-16 12:47:22,466 Game 'Call of Duty®: Modern Warfare® III' already exists in the database. Updating price.
+2024-11-16 12:47:22,466 Game 'Call of Duty®: Black Ops II' already exists in the database. Updating price.
+2024-11-16 12:47:22,467 Game 'Call of Duty®: Black Ops Cold War' already exists in the database. Updating price.
+2024-11-16 12:47:22,468 Game 'Call of Duty®: Black Ops 6 or Call of Duty®: Warzone™ Points' already exists in the database. Updating price.
+2024-11-16 12:47:22,468 Game 'Call of Duty®: Black Ops' already exists in the database. Updating price.
+2024-11-16 12:47:22,488 127.0.0.1 - - [16/Nov/2024 12:47:22] "POST /search HTTP/1.1" 200 -
+2024-11-16 12:47:22,496 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:47:22,497 127.0.0.1 - - [16/Nov/2024 12:47:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:47:42,170 Request Method: POST, URL: http://127.0.0.1:5000/add_to_wishlist/289
+2024-11-16 12:47:42,171 Form Data: ImmutableMultiDict([('target_price', '19.99')])
+2024-11-16 12:47:42,171 Attempting to add game with ID 289 to wishlist.
+2024-11-16 12:47:42,182 Game 'Call of Duty®: Modern Warfare®' added to wishlist with target price 19.99.
+2024-11-16 12:47:42,182 Redirecting to wishlist page.
+2024-11-16 12:47:42,183 127.0.0.1 - - [16/Nov/2024 12:47:42] "[32mPOST /add_to_wishlist/289 HTTP/1.1[0m" 302 -
+2024-11-16 12:47:42,188 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 12:47:42,188 Fetching wishlist items.
+2024-11-16 12:47:42,192 Fetched 2 wishlist item(s): [<Wishlist Game Call of Duty®: Vanguard, Target Price 9.99>, <Wishlist Game Call of Duty®: Modern Warfare®, Target Price 19.99>]
+2024-11-16 12:47:42,192 Wishlist Item: <Wishlist Game Call of Duty®: Vanguard, Target Price 9.99> - Game: Call of Duty®: Vanguard, Target Price: 9.99
+2024-11-16 12:47:42,192 Wishlist Item: <Wishlist Game Call of Duty®: Modern Warfare®, Target Price 19.99> - Game: Call of Duty®: Modern Warfare®, Target Price: 19.99
+2024-11-16 12:47:42,197 127.0.0.1 - - [16/Nov/2024 12:47:42] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 12:47:42,208 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:47:42,209 127.0.0.1 - - [16/Nov/2024 12:47:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:47:58,511 Request Method: POST, URL: http://127.0.0.1:5000/update_wishlist_item
+2024-11-16 12:47:58,511 Form Data: ImmutableMultiDict([('wishlist_id', '1'), ('target_price', '20.00')])
+2024-11-16 12:47:58,511 Request method: POST
+2024-11-16 12:47:58,511 Request URL: http://127.0.0.1:5000/update_wishlist_item
+2024-11-16 12:47:58,512 Request form data: ImmutableMultiDict([('wishlist_id', '1'), ('target_price', '20.00')])
+2024-11-16 12:47:58,512 Attempting to update wishlist item ID 1 to target price 20.0.
+2024-11-16 12:47:58,514 Found wishlist item: <Wishlist Game Call of Duty®: Vanguard, Target Price 9.99>
+2024-11-16 12:47:58,523 Successfully updated target price for Call of Duty®: Vanguard to $20.00.
+2024-11-16 12:47:58,523 127.0.0.1 - - [16/Nov/2024 12:47:58] "[32mPOST /update_wishlist_item HTTP/1.1[0m" 302 -
+2024-11-16 12:47:58,528 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 12:47:58,528 Fetching wishlist items.
+2024-11-16 12:47:58,530 Fetched 2 wishlist item(s): [<Wishlist Game Call of Duty®: Vanguard, Target Price 20.0>, <Wishlist Game Call of Duty®: Modern Warfare®, Target Price 19.99>]
+2024-11-16 12:47:58,530 Wishlist Item: <Wishlist Game Call of Duty®: Vanguard, Target Price 20.0> - Game: Call of Duty®: Vanguard, Target Price: 20.0
+2024-11-16 12:47:58,530 Wishlist Item: <Wishlist Game Call of Duty®: Modern Warfare®, Target Price 19.99> - Game: Call of Duty®: Modern Warfare®, Target Price: 19.99
+2024-11-16 12:47:58,531 127.0.0.1 - - [16/Nov/2024 12:47:58] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 12:47:58,542 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:47:58,543 127.0.0.1 - - [16/Nov/2024 12:47:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:48:20,493 Request Method: POST, URL: http://127.0.0.1:5000/delete_from_wishlist/1
+2024-11-16 12:48:20,493 Form Data: ImmutableMultiDict([])
+2024-11-16 12:48:20,511 127.0.0.1 - - [16/Nov/2024 12:48:20] "[32mPOST /delete_from_wishlist/1 HTTP/1.1[0m" 302 -
+2024-11-16 12:48:20,515 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 12:48:20,515 Fetching wishlist items.
+2024-11-16 12:48:20,516 Fetched 1 wishlist item(s): [<Wishlist Game Call of Duty®: Modern Warfare®, Target Price 19.99>]
+2024-11-16 12:48:20,516 Wishlist Item: <Wishlist Game Call of Duty®: Modern Warfare®, Target Price 19.99> - Game: Call of Duty®: Modern Warfare®, Target Price: 19.99
+2024-11-16 12:48:20,516 127.0.0.1 - - [16/Nov/2024 12:48:20] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 12:48:20,527 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:48:20,528 127.0.0.1 - - [16/Nov/2024 12:48:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:51:54,538 Request Method: POST, URL: http://127.0.0.1:5000/delete_from_wishlist/2
+2024-11-16 12:51:54,538 Form Data: ImmutableMultiDict([])
+2024-11-16 12:51:54,553 127.0.0.1 - - [16/Nov/2024 12:51:54] "[32mPOST /delete_from_wishlist/2 HTTP/1.1[0m" 302 -
+2024-11-16 12:51:54,557 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 12:51:54,557 Fetching wishlist items.
+2024-11-16 12:51:54,558 Fetched 0 wishlist item(s): []
+2024-11-16 12:51:54,559 127.0.0.1 - - [16/Nov/2024 12:51:54] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 12:51:54,567 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:51:54,567 127.0.0.1 - - [16/Nov/2024 12:51:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:51:55,714 Request Method: GET, URL: http://127.0.0.1:5000/
+2024-11-16 12:51:55,715 127.0.0.1 - - [16/Nov/2024 12:51:55] "GET / HTTP/1.1" 200 -
+2024-11-16 12:51:55,726 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:51:55,727 127.0.0.1 - - [16/Nov/2024 12:51:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:52:02,313 Request Method: POST, URL: http://127.0.0.1:5000/search
+2024-11-16 12:52:02,314 Form Data: ImmutableMultiDict([('game_name', 'Call of Duty')])
+2024-11-16 12:52:02,314 Search requested for game: Call of Duty
+2024-11-16 12:52:02,316 Database search returned 142 result(s)
+2024-11-16 12:52:02,316 Game found in local database, but proceeding to update from Steam API.
+2024-11-16 12:52:02,317 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:02,646 https://store.steampowered.com:443 "GET /api/storesearch/?term=Call%20of%20Duty&l=english&cc=us HTTP/11" 200 622
+2024-11-16 12:52:02,647 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:02,958 https://store.steampowered.com:443 "GET /api/appdetails?appids=1938090 HTTP/11" 200 5087
+2024-11-16 12:52:02,960 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:03,244 https://store.steampowered.com:443 "GET /api/appdetails?appids=2933620 HTTP/11" 200 4915
+2024-11-16 12:52:03,249 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:03,501 https://store.steampowered.com:443 "GET /api/appdetails?appids=1962663 HTTP/11" 200 2964
+2024-11-16 12:52:03,503 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:03,767 https://store.steampowered.com:443 "GET /api/appdetails?appids=311210 HTTP/11" 200 5621
+2024-11-16 12:52:03,771 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:04,049 https://store.steampowered.com:443 "GET /api/appdetails?appids=2519060 HTTP/11" 200 3417
+2024-11-16 12:52:04,053 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:04,267 https://store.steampowered.com:443 "GET /api/appdetails?appids=202970 HTTP/11" 200 3663
+2024-11-16 12:52:04,269 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:04,541 https://store.steampowered.com:443 "GET /api/appdetails?appids=1985810 HTTP/11" 200 3561
+2024-11-16 12:52:04,547 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:04,829 https://store.steampowered.com:443 "GET /api/appdetails?appids=42700 HTTP/11" 200 3882
+2024-11-16 12:52:04,831 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:05,058 https://store.steampowered.com:443 "GET /api/appdetails?appids=2170970 HTTP/11" 200 3067
+2024-11-16 12:52:05,060 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:52:05,360 https://store.steampowered.com:443 "GET /api/appdetails?appids=2000950 HTTP/11" 200 3389
+2024-11-16 12:52:05,384 Game 'Call of Duty®: Modern Warfare®' updated or added to the database with price 59.99.
+2024-11-16 12:52:05,441 127.0.0.1 - - [16/Nov/2024 12:52:05] "POST /search HTTP/1.1" 200 -
+2024-11-16 12:52:05,448 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:52:05,449 127.0.0.1 - - [16/Nov/2024 12:52:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:52:39,815 Request Method: GET, URL: http://127.0.0.1:5000/
+2024-11-16 12:52:39,816 127.0.0.1 - - [16/Nov/2024 12:52:39] "GET / HTTP/1.1" 200 -
+2024-11-16 12:52:39,827 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:52:39,828 127.0.0.1 - - [16/Nov/2024 12:52:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:55:14,356 Request Method: POST, URL: http://127.0.0.1:5000/search
+2024-11-16 12:55:14,356 Form Data: ImmutableMultiDict([('game_name', 'Total War Warhammer')])
+2024-11-16 12:55:14,356 Search requested for game: Total War Warhammer
+2024-11-16 12:55:14,357 Database search returned 0 result(s)
+2024-11-16 12:55:14,357 Game not found in local database. Fetching from Steam API for: Total War Warhammer
+2024-11-16 12:55:14,358 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:14,673 https://store.steampowered.com:443 "GET /api/storesearch/?term=Total%20War%20Warhammer&l=english&cc=us HTTP/11" 200 606
+2024-11-16 12:55:14,674 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:14,980 https://store.steampowered.com:443 "GET /api/appdetails?appids=1142710 HTTP/11" 200 5993
+2024-11-16 12:55:14,982 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:15,243 https://store.steampowered.com:443 "GET /api/appdetails?appids=594570 HTTP/11" 200 6847
+2024-11-16 12:55:15,246 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:15,508 https://store.steampowered.com:443 "GET /api/appdetails?appids=364360 HTTP/11" 200 6572
+2024-11-16 12:55:15,510 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:15,749 https://store.steampowered.com:443 "GET /api/appdetails?appids=2059190 HTTP/11" 200 5664
+2024-11-16 12:55:15,751 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:15,990 https://store.steampowered.com:443 "GET /api/appdetails?appids=2325832 HTTP/11" 200 3041
+2024-11-16 12:55:15,993 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:16,284 https://store.steampowered.com:443 "GET /api/appdetails?appids=2891710 HTTP/11" 200 3063
+2024-11-16 12:55:16,286 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:16,532 https://store.steampowered.com:443 "GET /api/appdetails?appids=2325830 HTTP/11" 200 6760
+2024-11-16 12:55:16,533 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:16,782 https://store.steampowered.com:443 "GET /api/appdetails?appids=2891700 HTTP/11" 200 3073
+2024-11-16 12:55:16,783 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:17,015 https://store.steampowered.com:443 "GET /api/appdetails?appids=1824060 HTTP/11" 200 4507
+2024-11-16 12:55:17,016 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 12:55:17,308 https://store.steampowered.com:443 "GET /api/appdetails?appids=455040 HTTP/11" 200 7288
+2024-11-16 12:55:17,310 Found 10 game(s) on Steam API, adding to local database.
+2024-11-16 12:55:17,311 Game 'Total War: WARHAMMER III' already exists in the database. Updating price.
+2024-11-16 12:55:17,312 Game 'Total War: WARHAMMER II' already exists in the database. Updating price.
+2024-11-16 12:55:17,323 Game 'Total War: WARHAMMER III - Forge of the Chaos Dwarfs' already exists in the database. Updating price.
+2024-11-16 12:55:17,324 Game 'Total War: WARHAMMER III - Elspeth – Thrones of Decay' already exists in the database. Updating price.
+2024-11-16 12:55:17,325 Game 'Total War: WARHAMMER III - Shadows of Change' already exists in the database. Updating price.
+2024-11-16 12:55:17,326 Game 'Total War: WARHAMMER III - Champions of Chaos' already exists in the database. Updating price.
+2024-11-16 12:55:17,327 Game 'Total War: WARHAMMER - Norsca' already exists in the database. Updating price.
+2024-11-16 12:55:17,333 127.0.0.1 - - [16/Nov/2024 12:55:17] "POST /search HTTP/1.1" 200 -
+2024-11-16 12:55:17,340 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:55:17,341 127.0.0.1 - - [16/Nov/2024 12:55:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:55:50,519 Request Method: POST, URL: http://127.0.0.1:5000/add_to_wishlist/290
+2024-11-16 12:55:50,520 Form Data: ImmutableMultiDict([('target_price', '19.99')])
+2024-11-16 12:55:50,520 Attempting to add game with ID 290 to wishlist.
+2024-11-16 12:55:50,527 Game 'Total War: WARHAMMER' added to wishlist with target price 19.99.
+2024-11-16 12:55:50,527 Redirecting to wishlist page.
+2024-11-16 12:55:50,527 127.0.0.1 - - [16/Nov/2024 12:55:50] "[32mPOST /add_to_wishlist/290 HTTP/1.1[0m" 302 -
+2024-11-16 12:55:50,534 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 12:55:50,534 Fetching wishlist items.
+2024-11-16 12:55:50,535 Fetched 1 wishlist item(s): [<Wishlist Game Total War: WARHAMMER, Target Price 19.99>]
+2024-11-16 12:55:50,535 Wishlist Item: <Wishlist Game Total War: WARHAMMER, Target Price 19.99> - Game: Total War: WARHAMMER, Target Price: 19.99
+2024-11-16 12:55:50,536 127.0.0.1 - - [16/Nov/2024 12:55:50] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 12:55:50,546 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:55:50,547 127.0.0.1 - - [16/Nov/2024 12:55:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:56:20,052 Request Method: POST, URL: http://127.0.0.1:5000/update_wishlist_item
+2024-11-16 12:56:20,052 Form Data: ImmutableMultiDict([('wishlist_id', '1'), ('target_price', '30.00')])
+2024-11-16 12:56:20,052 Request method: POST
+2024-11-16 12:56:20,052 Request URL: http://127.0.0.1:5000/update_wishlist_item
+2024-11-16 12:56:20,052 Request form data: ImmutableMultiDict([('wishlist_id', '1'), ('target_price', '30.00')])
+2024-11-16 12:56:20,052 Attempting to update wishlist item ID 1 to target price 30.0.
+2024-11-16 12:56:20,054 Found wishlist item: <Wishlist Game Total War: WARHAMMER, Target Price 19.99>
+2024-11-16 12:56:20,060 Successfully updated target price for Total War: WARHAMMER to $30.00.
+2024-11-16 12:56:20,060 127.0.0.1 - - [16/Nov/2024 12:56:20] "[32mPOST /update_wishlist_item HTTP/1.1[0m" 302 -
+2024-11-16 12:56:20,066 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 12:56:20,066 Fetching wishlist items.
+2024-11-16 12:56:20,067 Fetched 1 wishlist item(s): [<Wishlist Game Total War: WARHAMMER, Target Price 30.0>]
+2024-11-16 12:56:20,067 Wishlist Item: <Wishlist Game Total War: WARHAMMER, Target Price 30.0> - Game: Total War: WARHAMMER, Target Price: 30.0
+2024-11-16 12:56:20,067 127.0.0.1 - - [16/Nov/2024 12:56:20] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 12:56:20,079 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:56:20,080 127.0.0.1 - - [16/Nov/2024 12:56:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 12:56:31,636 Request Method: POST, URL: http://127.0.0.1:5000/delete_from_wishlist/1
+2024-11-16 12:56:31,636 Form Data: ImmutableMultiDict([])
+2024-11-16 12:56:31,651 127.0.0.1 - - [16/Nov/2024 12:56:31] "[32mPOST /delete_from_wishlist/1 HTTP/1.1[0m" 302 -
+2024-11-16 12:56:31,658 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 12:56:31,658 Fetching wishlist items.
+2024-11-16 12:56:31,659 Fetched 0 wishlist item(s): []
+2024-11-16 12:56:31,660 127.0.0.1 - - [16/Nov/2024 12:56:31] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 12:56:31,669 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 12:56:31,669 127.0.0.1 - - [16/Nov/2024 12:56:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 13:04:46,079 Request Method: GET, URL: http://127.0.0.1:5000/
+2024-11-16 13:04:46,080 127.0.0.1 - - [16/Nov/2024 13:04:46] "GET / HTTP/1.1" 200 -
+2024-11-16 13:04:46,088 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 13:04:46,088 127.0.0.1 - - [16/Nov/2024 13:04:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 13:34:15,226 Request Method: POST, URL: http://127.0.0.1:5000/search
+2024-11-16 13:34:15,227 Form Data: ImmutableMultiDict([('game_name', 'Total War ')])
+2024-11-16 13:34:15,227 Search requested for game: Total War 
+2024-11-16 13:34:15,229 Database search returned 0 result(s)
+2024-11-16 13:34:15,230 Game not found in local database. Fetching from Steam API for: Total War 
+2024-11-16 13:34:15,231 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:15,507 https://store.steampowered.com:443 "GET /api/storesearch/?term=Total%20War%20&l=english&cc=us HTTP/11" 200 659
+2024-11-16 13:34:15,509 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:15,758 https://store.steampowered.com:443 "GET /api/appdetails?appids=1142710 HTTP/11" 200 5993
+2024-11-16 13:34:15,760 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:16,018 https://store.steampowered.com:443 "GET /api/appdetails?appids=779340 HTTP/11" 200 6003
+2024-11-16 13:34:16,021 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:16,246 https://store.steampowered.com:443 "GET /api/appdetails?appids=1937780 HTTP/11" 200 5453
+2024-11-16 13:34:16,247 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:16,493 https://store.steampowered.com:443 "GET /api/appdetails?appids=214950 HTTP/11" 200 6373
+2024-11-16 13:34:16,494 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:16,708 https://store.steampowered.com:443 "GET /api/appdetails?appids=594570 HTTP/11" 200 6848
+2024-11-16 13:34:16,710 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:16,888 https://store.steampowered.com:443 "GET /api/appdetails?appids=364360 HTTP/11" 200 6727
+2024-11-16 13:34:16,893 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:17,143 https://store.steampowered.com:443 "GET /api/appdetails?appids=325610 HTTP/11" 200 4626
+2024-11-16 13:34:17,144 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:17,379 https://store.steampowered.com:443 "GET /api/appdetails?appids=201270 HTTP/11" 200 5965
+2024-11-16 13:34:17,381 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:17,620 https://store.steampowered.com:443 "GET /api/appdetails?appids=885970 HTTP/11" 200 4998
+2024-11-16 13:34:17,621 Starting new HTTPS connection (1): store.steampowered.com:443
+2024-11-16 13:34:17,808 https://store.steampowered.com:443 "GET /api/appdetails?appids=2059190 HTTP/11" 200 5947
+2024-11-16 13:34:17,810 Found 10 game(s) on Steam API, adding to local database.
+2024-11-16 13:34:17,810 Game 'Total War: WARHAMMER III' already exists in the database. Updating price.
+2024-11-16 13:34:17,825 Game 'Total War: WARHAMMER II' already exists in the database. Updating price.
+2024-11-16 13:34:17,826 Game 'Total War: WARHAMMER' already exists in the database. Updating price.
+2024-11-16 13:34:17,828 Game 'Total War: WARHAMMER III - Forge of the Chaos Dwarfs' already exists in the database. Updating price.
+2024-11-16 13:34:17,835 127.0.0.1 - - [16/Nov/2024 13:34:17] "POST /search HTTP/1.1" 200 -
+2024-11-16 13:34:17,845 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 13:34:17,846 127.0.0.1 - - [16/Nov/2024 13:34:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 13:34:45,384 Request Method: POST, URL: http://127.0.0.1:5000/add_to_wishlist/295
+2024-11-16 13:34:45,384 Form Data: ImmutableMultiDict([('target_price', '10.00')])
+2024-11-16 13:34:45,384 Attempting to add game with ID 295 to wishlist.
+2024-11-16 13:34:45,391 Game 'Total War: ROME II - Emperor Edition' added to wishlist with target price 10.0.
+2024-11-16 13:34:45,391 Redirecting to wishlist page.
+2024-11-16 13:34:45,392 127.0.0.1 - - [16/Nov/2024 13:34:45] "[32mPOST /add_to_wishlist/295 HTTP/1.1[0m" 302 -
+2024-11-16 13:34:45,396 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 13:34:45,396 Fetching wishlist items.
+2024-11-16 13:34:45,397 Fetched 1 wishlist item(s): [<Wishlist Game Total War: ROME II - Emperor Edition, Target Price 10.0>]
+2024-11-16 13:34:45,397 Wishlist Item: <Wishlist Game Total War: ROME II - Emperor Edition, Target Price 10.0> - Game: Total War: ROME II - Emperor Edition, Target Price: 10.0
+2024-11-16 13:34:45,398 127.0.0.1 - - [16/Nov/2024 13:34:45] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 13:34:45,404 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 13:34:45,405 127.0.0.1 - - [16/Nov/2024 13:34:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 13:34:55,649 Request Method: POST, URL: http://127.0.0.1:5000/update_wishlist_item
+2024-11-16 13:34:55,649 Form Data: ImmutableMultiDict([('wishlist_id', '1'), ('target_price', '9.99')])
+2024-11-16 13:34:55,649 Request method: POST
+2024-11-16 13:34:55,649 Request URL: http://127.0.0.1:5000/update_wishlist_item
+2024-11-16 13:34:55,649 Request form data: ImmutableMultiDict([('wishlist_id', '1'), ('target_price', '9.99')])
+2024-11-16 13:34:55,649 Attempting to update wishlist item ID 1 to target price 9.99.
+2024-11-16 13:34:55,650 Found wishlist item: <Wishlist Game Total War: ROME II - Emperor Edition, Target Price 10.0>
+2024-11-16 13:34:55,656 Successfully updated target price for Total War: ROME II - Emperor Edition to $9.99.
+2024-11-16 13:34:55,657 127.0.0.1 - - [16/Nov/2024 13:34:55] "[32mPOST /update_wishlist_item HTTP/1.1[0m" 302 -
+2024-11-16 13:34:55,661 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 13:34:55,661 Fetching wishlist items.
+2024-11-16 13:34:55,661 Fetched 1 wishlist item(s): [<Wishlist Game Total War: ROME II - Emperor Edition, Target Price 9.99>]
+2024-11-16 13:34:55,661 Wishlist Item: <Wishlist Game Total War: ROME II - Emperor Edition, Target Price 9.99> - Game: Total War: ROME II - Emperor Edition, Target Price: 9.99
+2024-11-16 13:34:55,662 127.0.0.1 - - [16/Nov/2024 13:34:55] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 13:34:55,670 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 13:34:55,671 127.0.0.1 - - [16/Nov/2024 13:34:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-11-16 13:35:00,657 Request Method: POST, URL: http://127.0.0.1:5000/delete_from_wishlist/1
+2024-11-16 13:35:00,658 Form Data: ImmutableMultiDict([])
+2024-11-16 13:35:00,673 127.0.0.1 - - [16/Nov/2024 13:35:00] "[32mPOST /delete_from_wishlist/1 HTTP/1.1[0m" 302 -
+2024-11-16 13:35:00,678 Request Method: GET, URL: http://127.0.0.1:5000/wishlist
+2024-11-16 13:35:00,679 Fetching wishlist items.
+2024-11-16 13:35:00,679 Fetched 0 wishlist item(s): []
+2024-11-16 13:35:00,680 127.0.0.1 - - [16/Nov/2024 13:35:00] "GET /wishlist HTTP/1.1" 200 -
+2024-11-16 13:35:00,687 Request Method: GET, URL: http://127.0.0.1:5000/static/style.css
+2024-11-16 13:35:00,688 127.0.0.1 - - [16/Nov/2024 13:35:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

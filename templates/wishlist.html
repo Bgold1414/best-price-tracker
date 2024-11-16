@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}My Wishlist{% endblock %}
+
+{% block content %}
+<section id="wishlist-section" class="container my-5">
+    <h2>My Wishlist</h2>
+    {% if wishlist %}
+        <ul class="list-group">
+            {% for item in wishlist %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>{{ item.game.name }}</strong> - ${{ item.game.price }}
+                        {% if item.target_price %}
+                            <br>Target Price: ${{ item.target_price }}
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Form to update target price -->
+                    <form action="{{ url_for('update_wishlist_item') }}" method="POST" class="d-inline">
+                        <input type="hidden" name="wishlist_id" value="{{ item.id }}">
+                        <div class="form-group">
+                            <label for="target_price_{{ item.id }}">New Target Price ($):</label>
+                            <input type="number" step="0.01" name="target_price" id="target_price_{{ item.id }}" value="{{ item.target_price }}" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">Update Target Price</button>
+                    </form>
+                    
+                    <!-- Form to delete the wishlist item -->
+                    <form action="{{ url_for('delete_from_wishlist', wishlist_id=item.id) }}" method="POST" class="d-inline">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have no items in your wishlist.</p>
+    {% endif %}
+    <a href="/" class="btn btn-primary mt-3">Back to Search</a>
+</section>
+{% endblock %}

@@ -1,0 +1,82 @@
+/* Apply box-sizing to all elements for consistent sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f0f2;
+
+}
+
+main-header {
+    background-color: #17701a !important;
+    color: white !important;
+    padding: 20px !important;
+    text-align: center !important;
+}
+
+nav.navbar {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    padding: 20px !important;
+    text-align: center !important;
+}
+
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Button and imput focus syles for accessibility using ChatGPT4o*/
+button:focus,
+input[type="text"]:focus {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Results section */
+#results-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#price-list li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+}
