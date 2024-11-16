@@ -1,4 +1,5 @@
 # This is my video game wishlist application!
+#### Video URL: https://youtu.be/XAQOm-mqdG8
 
 ## Getting started with requesting my API key from Steam
 The first step was to acquire my API key from Steam by going to their page and using my GitHub account via GitHub Pages to register for a key. This process was surprisingly smooth, and it set the foundation for everything else. Once I had the key, I created an environment inside Visual Studio Code (VSCode), setting it up with Flask and using the dotenv library to hold my Steam API key. With the help of chatgpt4-o, I ensured that my key was stored securely by adding it to the `.gitignore` file, preventing accidental exposure when pushing to GitHub.
